@@ -1,0 +1,34 @@
+specVersion: 0.0.4
+description: subgraph for ERC20
+repository: https://github.com/gzliudan/erc20-subgraph
+schema:
+  file: ./schema.graphql
+dataSources:
+  - name: TestCoin
+    kind: ethereum/contract
+    network: {{chain_name}}
+    source:
+      abi: TestCoin
+      address: '{{test_coin.address}}'
+      startBlock: {{test_coin.block}}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      file: ./src/test-coin.ts
+      entities:
+        - Account
+        - ERC20Contract
+        - ERC20Balance
+        - ERC20Approval
+        - ERC20Transfer
+        - Event
+        - Transaction
+      abis:
+        - name: TestCoin
+          file: ./abis/TestCoin.json
+      eventHandlers:
+        - event: Approval(indexed address,indexed address,uint256)
+          handler: handleApproval
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
