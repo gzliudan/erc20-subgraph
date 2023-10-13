@@ -1,0 +1,14 @@
+{
+  "chain_name": "xinfin",
+  "chain_id": 50,
+  "test_coin": {
+    "name": "TestCoin",
+    "args": [
+      "Test Coin",
+      "TCT"
+    ],
+    "address": "0x7aA5918Ce1C89700328C56f7a65Fe0A34C949a96",
+    "block": 66614246,
+    "hash": "0xd7d5fa8c4261b45267aca2a3fb21fecb85c56b2b4b29789cce83c935bad3a03f"
+  }
+}

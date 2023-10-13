@@ -1,0 +1,14 @@
+{
+  "chain_name": "apothem",
+  "chain_id": 51,
+  "test_coin": {
+    "name": "TestCoin",
+    "args": [
+      "Test Coin",
+      "TCT"
+    ],
+    "address": "0x67655cFEADBa1Ee453D150C62783C00C904787fE",
+    "block": 55589247,
+    "hash": "0x7f1b46c1e2901d6a918551b74740eaa1be31af74793e9787a3a8e4da58fa9b6e"
+  }
+}
