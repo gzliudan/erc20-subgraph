@@ -4,17 +4,23 @@ The subgraph for ERC20.
 
 ## 1. Setup work environment
 
-### 1.1 Resolve host name `graph-node` by edit hosts file:
+### 1.1 Resolve host name `graph-node` by edit hosts file
 
--   Linux: `/etc/hosts`
--   Windows: `C:\Windows\System32\drivers\etc\hosts`
+- Linux: `/etc/hosts`
+- Windows: `C:\Windows\System32\drivers\etc\hosts`
+
+test:
+
+```bash
+ping graph-node
+```
 
 ### 1.2 Install node and yarn
 
-Suggest to use node v16, the package.json requires:
+Suggest to use node v18, the package.json requires:
 
--   node >= 14.0.0
--   yarn >= 1.22.0
+- node >= 18.0.0
+- yarn >= 1.22.0
 
 ## 2. Clone this repo
 
@@ -26,26 +32,26 @@ yarn
 
 ## 3. Build and deploy
 
-### For apothem chain
+### 3.1 For apothem chain
 
 ```shell
 yarn make:apothem && yarn create:apothem && yarn deploy:apothem
 ```
 
-### For xinfin chain
+### 3.2 For xinfin chain
 
 ```shell
 yarn make:xinfin && yarn create:xinfin && yarn deploy:xinfin
 ```
 
-## 3. Query
+## 4. Query
 
-Endpoints: 
+Endpoints:
 
-- apothem network: http://<GRAPH-NODE-IP>:8000/subgraphs/name/gzliudan/test-coin-subgraph-apothem
-- xinfin network:  http://<GRAPH-NODE-IP>:8000/subgraphs/name/gzliudan/test-coin-subgraph-xinfin
+- apothem network: <http://graph-node:8000/subgraphs/name/gzliudan/test-coin-subgraph-apothem>
+- xinfin network: <http://graph-node:8000/subgraphs/name/gzliudan/test-coin-subgraph-xinfin>
 
-with language:
+Query statement:
 
 ```graphql
 {
